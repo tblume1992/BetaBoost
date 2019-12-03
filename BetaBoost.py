@@ -38,10 +38,10 @@ class BetaBoost:
   
   def fit(self,
           dtrain,
+          dtest,
           params = dict(),
           evals_result = None,
           verbose_eval = False,
-          dtest = None,
           ):
     
     bb = xgb.train(
