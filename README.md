@@ -4,6 +4,8 @@ A small wrapper to do Beta Boosting with XgBoost
 Initiate a BetaBoost object and fit a XgBoost model.
 Returns a XgBoost Train Object.
 
+Betaboosting assumes that there is some spike in the learning rate that exists which can give optimal performance, a beta kernel with a floor is used for convenience.
+
 A quick example with some toy data.  Found this example awhile ago for learning rate decay:
 
 ```python
