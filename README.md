@@ -94,6 +94,7 @@ plt.legend()
 plt.show()
 ```
 ![alt text](https://github.com/tblume1992/BetaBoost/blob/master/betaboost_test_image.png?raw=true "BB Awesome Image")
+
 A clear nice-ety of beta boosting is that the model's test set is one of the first models to converge and yet is resistant to overfitting.  Plotting the default beta kernel settings will show a function that starts quite small and peaks around .5 by iteration 30.  This process allows the model to make the largest jumps not when the trees are super weak (standard eta decay) or when they are too strong.
 
 A quick convergence and robustness to overfitting can be achieved with slight tunings of the beta kernel parameters...it's only 6 more parameters guys :)
