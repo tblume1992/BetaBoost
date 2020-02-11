@@ -28,12 +28,12 @@ class BetaBoost:
     return
 
   def beta_kernel(self, length):
-    scalar = self.scalar
-    a = 26
-    b = 1
-    scale = 80
-    loc = -68
-    lrs = [scalar*beta.pdf(i, a=a, b=b, scale=scale, loc=loc) + 0.01 for i in range(length)]
+    lrs = [self.scalar*beta.pdf(i, 
+                                a=self.a, 
+                                b=self.b, 
+                                scale=self.scale, 
+                                loc=self.loc) 
+           + 0.01 for i in range(length)]
     return lrs
   
   def fit(self,
