@@ -33,7 +33,7 @@ class BetaBoost:
                                 b=self.b, 
                                 scale=self.scale, 
                                 loc=self.loc) 
-           + 0.01 for i in range(length)]
+           + self.floor for i in range(length)]
     return lrs
   
   def fit(self,
