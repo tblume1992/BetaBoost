@@ -1,6 +1,8 @@
 # BetaBoost
 A small wrapper to do Beta Boosting with XgBoost
 
+```pip install BetaBoost==0.0.3```
+
 Initiate a BetaBoost object and fit a XgBoost model.
 Returns a XgBoost Train Object.
 
