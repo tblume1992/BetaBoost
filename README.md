@@ -1,7 +1,7 @@
 # BetaBoost
 A small wrapper to do Beta Boosting with XgBoost
 
-```pip install BetaBoost==0.0.4```
+```pip install BetaBoost==0.0.5```
 
 Initiate a BetaBoost object and fit a XgBoost model.
 Returns a XgBoost Train Object.
@@ -83,7 +83,7 @@ model3 = xgb.train(
 
 #Here we call the BetaBoost, the wrapper parameters are passed in the class init
 bb_evals = dict()
-import BetaBoost as bb
+From BetaBoost import BetaBoost as bb
 betabooster = bb.BetaBoost(n_boosting_rounds = max_iter)
 betabooster.fit(dtrain=dtrain,
                 maximize=True,
