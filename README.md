@@ -81,7 +81,7 @@ model3 = xgb.train(
 
 #Here we call the BetaBoost, the wrapper parameters are passed in the class init
 bb_evals = dict()
-From BetaBoost import BetaBoost as bb
+from BetaBoost import BetaBoost as bb
 betabooster = bb.BetaBoost(n_boosting_rounds = max_iter)
 betabooster.fit(dtrain=dtrain,
                 maximize=True,
