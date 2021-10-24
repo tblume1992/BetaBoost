@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="BetaBoost",
-    version="0.0.2",
+    version="0.0.4",
     author="Tyler Blume",
     url="https://github.com/tblume1992/BetaBoost",
     long_description=long_description,

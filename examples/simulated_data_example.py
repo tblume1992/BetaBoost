@@ -2,6 +2,7 @@ import numpy as np
 import xgboost as xgb
 import matplotlib.pyplot as plt
 
+xgb.__version__
 
 def generate_data():
     y = np.random.gamma(2, 4, OBS)
@@ -37,7 +38,7 @@ model1 = xgb.train(
     evals=[(dtrain, 'train'),(dtest, 'test')],
     evals_result=progress1,
     verbose_eval=False,
-    learning_rates=eta_decay
+    callbacks=[xgb.callback.LearningRateScheduler(eta_decay)]
 )
 
 progress2 = dict()
@@ -50,7 +51,7 @@ model2 = xgb.train(
     evals=[(dtrain, 'train'),(dtest, 'test')],
     evals_result=progress2,
     verbose_eval=False,
-    learning_rates=list(np.ones(max_iter)*0.01)
+    callbacks=[xgb.callback.LearningRateScheduler(list(np.ones(max_iter)*0.01))]
 )
 
 
@@ -64,7 +65,7 @@ model3 = xgb.train(
     evals=[(dtrain, 'train'),(dtest, 'test')],
     evals_result=progress3,
     verbose_eval=False,
-    learning_rates=list(np.ones(max_iter)*0.1)
+    callbacks=[xgb.callback.LearningRateScheduler(list(np.ones(max_iter)*0.1))]
 )
 
 #Here we call the BetaBoost, the wrapper parameters are passed in the class init
