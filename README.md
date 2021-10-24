@@ -30,7 +30,6 @@ FEATURES = 20
 PARAMS = {
     'eta': eta_base,
     "booster": "gbtree",
-    "silient": 1,
 }
 
 
