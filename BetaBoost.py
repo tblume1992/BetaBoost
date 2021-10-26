@@ -35,6 +35,7 @@ class BetaBoost:
                                 loc=self.loc) 
            + self.floor for i in range(length)]
     return lrs
+
   
   def fit(self,
           dtrain,
@@ -51,7 +52,6 @@ class BetaBoost:
     num_boost_round=self.n_boosting_rounds,
     evals=[(dtrain, 'train'),(dtest, 'test')],
     evals_result=evals_result,
-    verbose_eval=verbose_eval,
-    learning_rates=self.beta_kernel(self.n_boosting_rounds)
+    verbose_eval=verbose_eval
     )
     return bb
